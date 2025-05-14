@@ -1,0 +1,280 @@
+body main .cart .cart_items .cart_item .product_info, body main .products .info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 20px;
+}
+body main .cart .cart_items .cart_item .product_info p, body main .products .info p {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+body {
+  width: 100%;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+body img {
+  width: 40px;
+  height: 40px;
+}
+body header {
+  background-color: rgb(0, 255, 255);
+  width: 100%;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+@media screen and (max-width: 500px) {
+  body header img {
+    width: 25px;
+    height: auto;
+  }
+}
+@media screen and (max-width: 1024px) {
+  body header img {
+    width: 30px;
+    height: auto;
+  }
+}
+body header nav {
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+body header img {
+  cursor: pointer;
+}
+body header img:nth-child(3) {
+  position: relative;
+  display: inline-block;
+}
+body header .badge {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  background-color: rgb(255, 0, 0);
+  color: rgb(255, 255, 255);
+  border-radius: 50%;
+  padding: 5px 7px;
+  font-size: 10px;
+}
+body main .banner {
+  padding: 50px 0;
+  color: rgb(255, 0, 132);
+  text-align: center;
+  background-image: url("../img/banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: 55%;
+  font-weight: 800;
+}
+body main .banner h2 {
+  margin: 10px;
+}
+body main .banner p {
+  margin: 0;
+  opacity: 0.7;
+}
+body main .products {
+  width: 100%;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+}
+body main .products .product {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 10px;
+}
+body main .products .product img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  cursor: pointer;
+}
+@media screen and (min-width: 1025px) {
+  body main .products .product img:hover {
+    opacity: 0.5;
+    transition: all 0.25s ease;
+  }
+}
+body main .products div {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+body main .products button {
+  all: unset;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 40px;
+  padding: 10px 20px;
+  gap: 10px;
+  justify-content: center;
+  width: 100%;
+}
+body main .products button p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+body main .products button:hover {
+  opacity: 0.5;
+}
+body main .products .buy {
+  background-color: rgb(0, 255, 51);
+}
+body main .products .add_cart {
+  background-color: aqua;
+}
+body main .products .add_cart img {
+  align-self: center;
+  width: 25px;
+  height: auto;
+}
+body main .menu {
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  flex-direction: column;
+  padding: 10px 20px;
+  gap: 20px;
+  box-sizing: border-box;
+  height: calc(100dvh - 73.67px);
+  position: fixed;
+  left: -100%;
+  top: 73.67px;
+  box-shadow: 19px -1px 22px -15px rgba(0, 0, 0, 0.3);
+  transition: all 0.25s ease;
+}
+body main .menu .menu_title {
+  display: flex;
+  justify-content: space-between;
+}
+body main .menu .menu_title h2 {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+body main .menu .menu_title img {
+  cursor: pointer;
+}
+body main .menu button {
+  all: unset;
+  display: flex;
+  gap: 20px;
+  cursor: pointer;
+}
+body main .menu button p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 1024px) {
+  body main .menu img {
+    width: 30px;
+    height: auto;
+  }
+}
+@media screen and (max-width: 500px) {
+  body main .menu img {
+    width: 25px;
+    height: auto;
+  }
+}
+body main .cart {
+  background-color: rgb(255, 255, 255);
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-sizing: border-box;
+  height: calc(100dvh - 73.67px);
+  position: fixed;
+  right: -100%;
+  top: 73.67px;
+  bottom: 0;
+  box-shadow: -19px -1px 22px -15px rgba(0, 0, 0, 0.3);
+  transition: all 0.25s ease;
+  overflow-y: auto;
+  min-height: 0;
+  scrollbar-width: none;
+  scrollbar-color: transparent transparent;
+}
+body main .cart .cart_title {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px 5px;
+  position: sticky;
+  top: 0;
+  background-color: rgb(255, 255, 255);
+  z-index: 10;
+}
+body main .cart .cart_title h2 {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+body main .cart .cart_title img {
+  cursor: pointer;
+}
+body main .cart .cart_items {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 10px;
+}
+body main .cart .cart_items .cart_item {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  border: solid;
+}
+body main .cart .cart_items .cart_item img:first-child {
+  align-self: center;
+  width: 50px;
+  height: 50px;
+}
+body main .cart .cart_items .cart_item img:last-child {
+  width: 30px;
+  height: 30px;
+  align-self: center;
+  cursor: pointer;
+}
+body main .cart .buy_cart {
+  all: unset;
+  display: flex;
+  margin: 0 10px 10px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 255, 51);
+  cursor: pointer;
+}
+body main .show_menu {
+  left: 0;
+}
+body main .show_cart {
+  right: 0;
+}
+body main .hide {
+  display: none;
+}
+body .show_menu {
+  left: 0;
+}
+body .show_cart {
+  right: 0;
+}
+body .hide {
+  display: none;
+}/*# sourceMappingURL=main.css.map */

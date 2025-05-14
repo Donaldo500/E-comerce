@@ -1,0 +1,25 @@
+@import "./base";
+
+body{
+    width: 100%;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+
+    img{
+        width: 40px;
+        height: 40px;
+    }
+
+    @import "./header";
+
+    main{
+        @import "./banner";
+        @import "./products";
+        @import "./menu";
+        @import "./cart";
+        @import "./javafunctions";
+    }
+    
+    @import "./javafunctions";
+}

@@ -1,0 +1,19 @@
+.banner{
+    padding: 50px 0;
+    color: rgb(255, 0, 132);
+    text-align: center;
+    background-image: url("../img/banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 55%;
+    font-weight: 800;
+
+    h2{
+        margin: 10px;
+    }
+    
+    p{
+        margin: 0;
+        opacity: 0.7;
+    }
+}

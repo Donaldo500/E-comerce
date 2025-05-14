@@ -1,0 +1,29 @@
+@mixin flexbox{
+    display: flex;
+    justify-content: space-between;
+}
+
+%product_info{ 
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 20px;
+
+    p{
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+}
+
+@mixin tablets{
+    @media screen and (max-width: 1024px){@content};
+}
+
+@mixin phones{
+    @media screen and (max-width: 500px){@content};
+}
+
+@mixin laptops{
+    @media screen and (min-width: 1025px){@content};
+}
